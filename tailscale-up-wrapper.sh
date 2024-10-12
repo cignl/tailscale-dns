@@ -6,7 +6,7 @@ sleep 2
 # Check if Tailscale is already logged in
 if tailscale status | grep -q "Logged out"; then
     echo "Tailscale is not logged in. Running tailscale up..."
-    tailscale up --authkey=${TS_AUTHKEY} --accept-dns=false || { echo "Failed to log in"; exit 1; }
+    tailscale up --authkey=${TS_AUTHKEY} --accept-dns=false --hostname tailscale-dns || { echo "Failed to log in"; exit 1; }
 else
     echo "Tailscale is already logged in."
 fi
