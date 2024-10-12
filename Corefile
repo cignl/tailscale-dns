@@ -1,0 +1,7 @@
+.:5300 {
+    tailscale ts.cignl.cc
+    forward . 8.8.8.8 8.8.4.4
+    health
+    log
+    errors
+}
