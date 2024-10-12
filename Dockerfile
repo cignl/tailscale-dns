@@ -16,7 +16,7 @@ RUN cd plugin && \
     go build
 
 # Use Tailscale's unstable image as a build stage to copy binaries from
-FROM ghcr.io/tailscale/tailscale:unstable AS tailscale
+FROM tailscale/tailscale:unstable AS tailscale
 
 FROM alpine:3.19.1
 RUN apk add --no-cache iptables ca-certificates supervisor
